@@ -1,6 +1,9 @@
 
 const user = process.env.USER
 
+require('dotenv').config()
+
+
 if(process.argv[2] === 
     'web49'){
         console.log('web 49 is the best')
@@ -18,6 +21,7 @@ app.get('/hello', (req,res) => {
     })
 })
 
-app.listen(2000, () => {
-    console.log('listening on port 2000')
+const port = process.env.PORT || 2000
+app.listen(port, () => {
+    console.log(`listneing on port ${port}`)
 })
