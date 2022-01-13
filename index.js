@@ -21,6 +21,10 @@ app.get('/hello', (req,res) => {
     })
 })
 
+app.get('/', (req,res) => {
+    res.send(`<h1> Web 49 is cool </h1>`)
+})
+
 const port = process.env.PORT || 2000
 app.listen(port, () => {
     console.log(`listneing on port ${port}`)
